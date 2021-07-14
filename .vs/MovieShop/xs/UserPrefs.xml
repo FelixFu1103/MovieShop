@@ -1,0 +1,48 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{F3158268-24BE-440C-A867-BCBE3460922E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Data/MovieShopDbContext.cs">
+    <Files>
+      <File FileName="MovieShopMVC/Startup.cs" />
+      <File FileName="Infrastructure/Data/MovieShopDbContext.cs" Line="59" Column="1" />
+      <File FileName="Infrastructure/Migrations/20210714042145_updatingGenreTable.cs" Line="1" Column="1" />
+      <File FileName="ApplicationCore/Entities/Movie.cs" Line="32" Column="2" />
+      <File FileName="ApplicationCore/Entities/Trailer.cs" Line="13" Column="1" />
+      <File FileName="ApplicationCore/Entities/Cast.cs" Line="8" Column="20" />
+      <File FileName="ApplicationCore/Entities/Crew.cs" Line="10" Column="16" />
+      <File FileName="ApplicationCore/Entities/Favorite.cs" Line="11" Column="1" />
+      <File FileName="ApplicationCore/Entities/MovieCast.cs" Line="11" Column="1" />
+      <File FileName="ApplicationCore/Entities/MovieCrew.cs" Line="10" Column="6" />
+      <File FileName="ApplicationCore/Entities/MovieGenre.cs" Line="10" Column="1" />
+      <File FileName="ApplicationCore/Entities/Purchase.cs" Line="12" Column="6" />
+      <File FileName="ApplicationCore/Entities/Review.cs" Line="7" Column="14" />
+      <File FileName="ApplicationCore/Entities/Role.cs" Line="7" Column="41" />
+      <File FileName="ApplicationCore/Entities/User.cs" Line="18" Column="52" />
+      <File FileName="ApplicationCore/Entities/UserRole.cs" Line="7" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MovieShop" expanded="True">
+            <Node name="ApplicationCore" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Data" expanded="True">
+                <Node name="MovieShopDbContext.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="MovieShopMVC" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MovieShopMVC PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/feli-v/Downloads/MovieShopMVC/Infrastructure/Services/MovieService.cs" relfile="Infrastructure/Services/MovieService.cs" line="33" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

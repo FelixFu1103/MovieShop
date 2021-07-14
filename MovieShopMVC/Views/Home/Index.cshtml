@@ -1,0 +1,20 @@
+﻿@model List< ApplicationCore.Models.MovieCardResponseModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2> Top Movies Count: @Model.Count  </h2>
+
+@foreach (var movie in Model )
+{
+    <div>
+        @movie.Id<br />
+        @movie.Title <br />
+    </div>
+}
+
+
+
+
