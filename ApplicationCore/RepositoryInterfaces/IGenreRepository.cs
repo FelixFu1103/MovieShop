@@ -1,7 +1,9 @@
 ﻿using System;
+using ApplicationCore.Entities;
+
 namespace ApplicationCore.RepositoryInterfaces
 {
-    public interface IGenreRepository
+    public interface IGenreRepository : IAsyncRepository<Genre>
     {
     }
 }

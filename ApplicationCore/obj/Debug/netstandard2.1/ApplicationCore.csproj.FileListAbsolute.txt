@@ -19,9 +19,9 @@
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/bin/Debug/netstandard2.1/ApplicationCore.deps.json
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/bin/Debug/netstandard2.1/ApplicationCore.dll
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/bin/Debug/netstandard2.1/ApplicationCore.pdb
-/Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.csproj.AssemblyReference.cache
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.AssemblyInfoInputs.cache
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.AssemblyInfo.cs
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.csproj.CoreCompileInputs.cache
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.dll
 /Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.pdb
+/Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/Debug/netstandard2.1/ApplicationCore.csproj.AssemblyReference.cache
