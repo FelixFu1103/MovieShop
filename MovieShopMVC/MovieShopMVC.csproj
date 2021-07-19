@@ -18,6 +18,9 @@
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Views\Movies\" />
+    <None Remove="Views\Casts\" />
+    <None Remove="Views\Genres\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
@@ -31,5 +34,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Movies\" />
+    <Folder Include="Views\Casts\" />
+    <Folder Include="Views\Genres\" />
   </ItemGroup>
 </Project>

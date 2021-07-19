@@ -1,0 +1,45 @@
+﻿
+@model ApplicationCore.Models.CastDetailsResponseModel
+
+@{
+    ViewData["Title"] = "Cast Detail Page";
+}
+
+
+<div class="rounded">
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-2 offset-3">
+                <img class="mr-4 rounded img-fluid w-80" src="@Model.ProfilePath" alt="@Model.Name">
+            </div>
+            <div class="col">
+                <h1 class="">@Model.Name</h1>
+                <h3>
+                    <a href="@Model.TmdbUrl" class="text-dark mx-3">
+                        <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light">
+        <div class="row p-5">
+            <div class="col offset-5">
+                <h1>
+                    @(Model.Gender == "1" ? "Her Movie List" : (Model.Gender == "2") ? "His Movie List" : "")
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light">
+        <div class="row">
+            @foreach (var movie in @Model.Movies)
+            {
+                <div class="col-3">
+                    <partial name="_MovieCard" model="movie" />
+                    @*@await Html.PartialAsync(partialViewName: "_MovieCard", movie)*@
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+﻿
+@model ApplicationCore.Models.MovieDetailsResponseModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <div style="height: 500px; background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%),url('@Model.BackdropUrl');" class="row jumbotron">
+        <div class="col-4">
+            <div class="card" style="height: 400px; width: 300px; margin-left:100px">
+                <img style="height:400px; width:300px" src="@Model.PosterUrl" alt="@Model.Title">
+            </div>
+        </div>
+        <div class="col-4">
+            <h2 class="text-white">@Model.Title</h2><br> 
+
+            <div class="text-muted">
+                @Model.Tagline
+            </div>
+            <div>
+                <span class="text-muted"> @Model.RunTime m |  @Convert.ToDateTime(Model.ReleaseDate).Year </span>
+                &emsp; &emsp;
+                @foreach (var genre in Model.Genres)
+                {
+                    <span class="badge badge-secondary">@genre.Name</span>
+                }
+            </div>
+
+            <span class="badge badge-warning">@Model.Rating</span>
+            <p class="text-white">@Model.Overview</p>
+        </div>
+        <div class="col-4">
+            <div class="col-xs-1" align="center">
+                <a class="btn btn-block btn-outline-light" href="#" style="width: 200px" role="button"><i class="fas fa-edit" aria-hidden="true"></i> REVIEW</a><hr />
+                <a class="btn btn-block btn-outline-light" href="#" style="width: 200px"role="button"><i class="fas fa-play" aria-hidden="true"></i> TRAILER</a><hr />
+                <a class="btn btn-block btn-light" href="#" style="width: 200px" role="button">BUY @Model.Price</a><hr />
+                <a class="btn btn-block btn-light" href="#" style="width: 200px"role="button" >WATCH MOVIE</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-4">
+            <div><h3>MOVIE FACTS</h3></div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparentpt pt-4">
+                    <i class="far fa-calendar-alt"></i>
+                    Release Date <span class="badge badge-pill badge-dark">@Convert.ToDateTime(Model.ReleaseDate).ToShortDateString()</span>
+                </li>
+                <li class="list-group-item bg-transparentpt pt-4">
+                    <i class="fas fa-hourglass-start"></i>
+                    Run Time <span class="badge badge-pill badge-dark">@Model.RunTime m</span>
+                </li>
+                <li class="list-group-item bg-transparentpt pt-4">
+                    <i class="fas fa-money-check-alt"></i>
+                    Box Office <span class="badge badge-pill badge-dark">$@String.Format("{0:C0}", Model.Revenue)</span>
+                </li>
+                <li class="list-group-item bg-transparentpt pt-4">
+                    <i class="fas fa-dollar-sign"></i>
+                    Budget <span class="badge badge-pill badge-dark">$@String.Format("{0:C0}", Model.Budget)</span>
+                </li>
+                <li class="list-group-item bg-transparentpt pt-4">
+                    <i class="fab fa-imdb" aria-hidden="true"></i> &emsp;
+                    <a href="@Model.TmdbUrl" class="text-dark mx-3">
+                        <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            
+                
+        </div>
+        <div class="col-6">
+            <div><h3>CAST</h3></div>
+            @foreach (var cast in Model.Casts)
+            {
+            
+           
+                <a class="text-dark" asp-controller="Casts" asp-action="Details" asp-route-id="@cast.Id">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="@cast.ProfilePath" class="mr-4 rounded img-fluid" width="40" height="60" alt="{@cast.Name} Profile" />
+                            </div>
+                            <div class="col-4">
+                                @cast.Name
+                            </div>
+                            <div class="col-4">
+                                @cast.Character
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            }
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+
+</div>

@@ -5855,7 +5855,7 @@
       "outputPath": "/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/feli-v/.nuget/NuGet/NuGet.Config"
+        "/Users/feli-v/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

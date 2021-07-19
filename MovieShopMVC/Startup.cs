@@ -12,6 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data;
+using ApplicationCore.RepositoryInterfaces;
+using Infrastructure.Repositories;
+using ApplicationCore.Entities;
 
 namespace MovieShopMVC
 {
@@ -29,6 +32,12 @@ namespace MovieShopMVC
         {
             services.AddControllersWithViews();
             services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<IGenreService, GenresService>();
+            services.AddScoped<IGenreRepository, GenreRepository>();
+            services.AddScoped<ICastService, CastService>();
+            services.AddScoped<ICastRepository, CastRepository>();
+
             services.AddDbContext<MovieShopDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("MovieShopDbConnection"));
             });
