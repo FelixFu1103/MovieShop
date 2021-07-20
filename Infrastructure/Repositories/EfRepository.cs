@@ -56,7 +56,9 @@ namespace Infrastructure.Repositories
 
         public async Task<T> AddAsync(T entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.Set<T>().AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
+            return entity;
         }
 
         public async Task<T> UpdateAsync(T entity)

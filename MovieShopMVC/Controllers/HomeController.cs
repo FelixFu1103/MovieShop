@@ -28,10 +28,7 @@ namespace MovieShopMVC.Controllers
 
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        
 
         public async Task<IActionResult> Index()
         {
@@ -60,6 +57,10 @@ namespace MovieShopMVC.Controllers
         // UserController
         // newing up
 
+        public IActionResult Privacy()
+        {
+            return LocalRedirect("~/Home/Privacy");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

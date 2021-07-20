@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Jd4Ubvef9p3tQwln3k9rzUNN3OkPKsZ5ihO79QvmnOk1X7976XdxIVpC5O8l6sM3pXOKjpgR+uUpNZ4d4OWXVg==",
+  "dgSpecHash": "gq1RyD3iQsfPccvsLnbbWoi+zHSeEGq1y2Bhjau34ltMh2l5iXcS/ZuAs2a8B69SfK7pjS4zo4RJpqDs+K3nOQ==",
   "success": true,
   "projectFilePath": "/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/MovieShopMVC.csproj",
   "expectedPackageFiles": [
     "/Users/feli-v/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/feli-v/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.8/microsoft.aspnetcore.cryptography.internal.5.0.8.nupkg.sha512",
+    "/Users/feli-v/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/5.0.8/microsoft.aspnetcore.cryptography.keyderivation.5.0.8.nupkg.sha512",
     "/Users/feli-v/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/feli-v/.nuget/packages/microsoft.data.sqlclient/2.0.1/microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "/Users/feli-v/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.0.1/microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

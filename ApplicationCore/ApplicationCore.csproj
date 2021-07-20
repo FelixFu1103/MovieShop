@@ -15,12 +15,14 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="System.ComponentModel.Annotations" />
+    <None Remove="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Entities\" />
     <Folder Include="RepositoryInterfaces\" />
     <Folder Include="ServiceInterfaces\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />

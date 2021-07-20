@@ -98,8 +98,9 @@ namespace Infrastructure.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .HasMaxLength(24)
-                        .HasColumnType("nvarchar(24)");
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
 
                     b.HasKey("Id");
 
@@ -241,11 +242,12 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<Guid>("PurchaseNumber")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(5,2)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(9.9m);
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -254,8 +256,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.HasIndex("UserId", "MovieId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Purchase");
                 });

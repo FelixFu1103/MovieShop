@@ -99,14 +99,14 @@
           "/Users/feli-v/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
               "/Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/ApplicationCore.csproj": {
                 "projectPath": "/Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/ApplicationCore.csproj"
@@ -121,9 +121,13 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.8, )"
@@ -160,7 +164,10 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "NETStandard.Library": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },

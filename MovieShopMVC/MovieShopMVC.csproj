@@ -21,6 +21,8 @@
     <None Remove="Views\Movies\" />
     <None Remove="Views\Casts\" />
     <None Remove="Views\Genres\" />
+    <None Remove="Views\Account\" />
+    <None Remove="Views\Purchase\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
@@ -39,5 +41,7 @@
     <Folder Include="Views\Movies\" />
     <Folder Include="Views\Casts\" />
     <Folder Include="Views\Genres\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Purchase\" />
   </ItemGroup>
 </Project>

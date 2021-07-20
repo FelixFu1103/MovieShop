@@ -98,11 +98,14 @@ namespace Infrastructure.Data
         private void ConfigurePurchase(EntityTypeBuilder<Purchase> builder)
         {
             builder.ToTable("Purchase");
-            builder.HasKey(p => p.Id);
-            builder.Property(p => p.Id).ValueGeneratedOnAdd();
-            builder.Property(p => p.PurchaseNumber).ValueGeneratedOnAdd();
-            builder.HasIndex(p => new { p.UserId, p.MovieId }).IsUnique();
-            builder.Property(p => p.TotalPrice).HasColumnType("decimal(5, 2)");
+            builder.HasOne(p => p.Movie)
+                .WithMany(m => m.Purchases)
+                .HasForeignKey(p => p.MovieId);
+            builder.HasOne(p => p.User)
+                .WithMany(u => u.Purchases)
+                .HasForeignKey(p => p.UserId);
+
+            builder.Property(p => p.TotalPrice).HasColumnType("decimal(18,2)").HasDefaultValue(9.9m);
         }
 
         //private void ConfigureMovieGenre(EntityTypeBuilder<MovieGenre> builder)
@@ -187,7 +190,7 @@ namespace Infrastructure.Data
         builder.Property(m => m.Budget).HasColumnType("decimal(18, 4)").HasDefaultValue(9.9m);
         builder.Property(m => m.Revenue).HasColumnType("decimal(18, 4)").HasDefaultValue(9.9m);
         builder.Property(m => m.CreatedDate).HasDefaultValueSql("getdate()");
-        builder.Ignore(m => m.Rating);
+        builder.Ignore(m => m.Rating); // not create in the database
     }
 }
 }

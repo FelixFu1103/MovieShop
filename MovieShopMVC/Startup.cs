@@ -15,6 +15,7 @@ using Infrastructure.Data;
 using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.Repositories;
 using ApplicationCore.Entities;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace MovieShopMVC
 {
@@ -37,10 +38,28 @@ namespace MovieShopMVC
             services.AddScoped<IGenreRepository, GenreRepository>();
             services.AddScoped<ICastService, CastService>();
             services.AddScoped<ICastRepository, CastRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICurrentUser, CurrentUser>();
+            services.AddScoped<IPurchaseRepository, PurchaseRepository>();
+            services.AddScoped<IPurchaseService, PurchaseService>();
+
+
+
+            services.AddHttpContextAccessor();
+
 
             services.AddDbContext<MovieShopDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("MovieShopDbConnection"));
             });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => {
+
+                    options.Cookie.Name = "MovieShopAuth";
+                    options.ExpireTimeSpan = TimeSpan.FromHours(2);
+                    options.LoginPath = "/Account/Login";
+                });
             // services.AddScoped<IMovieService, MovieService2>();
             // 3rdy party IOC Autofac, Ninject
             // ASP.NET Core has buil;tin support for DI and it has built-in container
@@ -68,13 +87,15 @@ namespace MovieShopMVC
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Privacy}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

@@ -6,19 +6,16 @@
 
 
 <div class="rounded">
-    <div class="container-fluid bg-light">
-        <div class="row">
-            @foreach (var movie in Model)
-            {
-                <div class="col-3">
-                    <partial name="_MovieCard" model="movie" />
-
-                </div>
-            }
-
-        </div>
+    <div class="container-fluid bg-light"></div>
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+            <div class="col-2">
+                <partial name="_MovieCard" model="movie" />
+                @*@await Html.PartialAsync("_MovieCard", movie);*@
+            </div>
+        }
     </div>
 </div>
-
 
 

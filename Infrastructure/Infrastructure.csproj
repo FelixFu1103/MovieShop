@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +13,7 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Data\" />
+    <None Remove="Microsoft.AspNetCore.Cryptography.KeyDerivation" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
@@ -34,5 +35,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="5.0.8" />
+  </ItemGroup>
+  <ItemGroup>
+          <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 </Project>
+

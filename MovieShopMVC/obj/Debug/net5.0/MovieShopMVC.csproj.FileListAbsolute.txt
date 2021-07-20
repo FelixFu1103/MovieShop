@@ -177,7 +177,6 @@
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/MovieShopMVC.TagHelpers.output.cache
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/MovieShopMVC.RazorCoreGenerate.cache
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
-/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Home/Privacy.cshtml.g.cs
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Movies/Details.cshtml.g.cs
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs
@@ -196,3 +195,10 @@
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Casts/Details.cshtml.g.cs
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Shared/_GenresView.cshtml.g.cs
 /Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Genres/Details.cshtml.g.cs
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/bin/Debug/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/bin/Debug/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Account/Login.cshtml.g.cs
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Account/Register.cshtml.g.cs
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Purchase/Details.cshtml.g.cs
+/Users/feli-v/Downloads/MovieShopMVC/MovieShopMVC/obj/Debug/net5.0/Razor/Views/Home/Privacy.cshtml.g.cs
