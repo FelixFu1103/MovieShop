@@ -11,5 +11,7 @@ namespace ApplicationCore.ServiceInterfaces
 
         Task<UserLoginResponseModel> Login(string email, string password);
         //Task<List<MovieCardResponseModel>> GetUserPurchasedMovies(int userId);
+
+        Task<UserResponseModel> GetUserById(int id);
     }
 }

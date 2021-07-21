@@ -7261,7 +7261,7 @@
       "outputPath": "/Users/feli-v/Downloads/MovieShopMVC/ApplicationCore/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/feli-v/.config/NuGet/NuGet.Config"
+        "/Users/feli-v/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"

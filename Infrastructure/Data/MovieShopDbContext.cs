@@ -190,7 +190,7 @@ namespace Infrastructure.Data
         builder.Property(m => m.Budget).HasColumnType("decimal(18, 4)").HasDefaultValue(9.9m);
         builder.Property(m => m.Revenue).HasColumnType("decimal(18, 4)").HasDefaultValue(9.9m);
         builder.Property(m => m.CreatedDate).HasDefaultValueSql("getdate()");
-        builder.Ignore(m => m.Rating); // not create in the database
+        builder.Property(m => m.Rating); // not create in the database
     }
 }
 }

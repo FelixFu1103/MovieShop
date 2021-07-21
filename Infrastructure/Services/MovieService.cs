@@ -32,6 +32,33 @@ namespace Infrastructure.Services
             return movieCards;
         }
 
+        public async Task<List<MovieCardResponseModel>> GetTopRatedMovies()
+        {
+            var movies = await _movieRepository.GetTop30RatedMovies();
+
+            var movieCards = new List<MovieCardResponseModel>();
+
+            foreach (var movie in movies)
+            {
+                movieCards.Add(new MovieCardResponseModel { Id = movie.Id, Budget = movie.Budget.GetValueOrDefault(), PosterUrl = movie.PosterUrl, Title = movie.Title });
+            }
+
+            return movieCards;
+        }
+
+        public async Task<List<MovieCardResponseModel>> GetMovies()
+        {
+            var movies = await _movieRepository.GetAll();
+            var movieCards = new List<MovieCardResponseModel>();
+
+            foreach (var movie in movies)
+            {
+                movieCards.Add(new MovieCardResponseModel { Id = movie.Id, Budget = movie.Budget.GetValueOrDefault(), PosterUrl = movie.PosterUrl, Title = movie.Title });
+            }
+
+            return movieCards;
+        }
+
         public async Task<MovieDetailsResponseModel> GetMovieDetails(int id)
         {
             var movie = await _movieRepository.GetByIdAsync(id);
@@ -82,10 +109,67 @@ namespace Infrastructure.Services
 
             return movieDetails;
         }
+
+        public async Task<List<MovieCardResponseModel>> GetMoviesByGenreId(int id)
+        {
+            var genre = await _movieRepository.GetByIdAsync(id);
+
+            if (genre == null)
+            {
+                return null;
+            }
+
+            var genreMovie = new List<MovieCardResponseModel>();
+
+            foreach (var movieGenre in genre.Genres)
+            {
+                genreMovie.Add(new MovieCardResponseModel
+                {
+                    Id = movieGenre.Id,
+                    Title = genre.Title,
+                    PosterUrl = genre.PosterUrl,
+                    Budget = (decimal)genre.Budget,
+
+                });
+            }
+
+            return genreMovie;
+        }
+
+        public async Task<List<ReviewResponseModel>> GetReviewsByMovie(int id)
+        {
+            var reviews = await _movieRepository.GetReviewByMovie(id);
+            var reviewCards = new List<ReviewResponseModel>();
+
+            foreach (var review in reviews)
+            {
+                reviewCards.Add(new ReviewResponseModel
+                {
+                    MovieId = review.MovieId,
+                    UserId = review.UserId,
+                    ReviewText = review.ReviewText,
+                    Rating = review.Rating
+                });
+
+            }
+
+            return reviewCards;
+        }
+
+        public async Task<MovieDetailsResponseModel> CreateMovie(CreateMovieRequestModel createMovieRequestModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<MovieDetailsResponseModel> UpdateMovie(CreateMovieRequestModel createMovieRequestModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<PurchaseModel> GetMoviePurchases(PurchaseModel purchaseResponseModel)
+        {
+            throw new NotImplementedException();
+        }
     }
-
-
-
-
 
 }
