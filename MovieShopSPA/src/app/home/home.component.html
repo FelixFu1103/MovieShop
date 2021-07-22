@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="rounded">
+    <div class="container-fluid bl-light">
+        <div class="row">
+            <div class="col-6 col-lg-3 col-sm-4 col-xl-2" *ngFor="let movie of movies">
+                <!-- ngFor built-in directive  -->
+                <!-- Display movie card -->
+                <!-- use Movie Card Child Component -->
+
+                <app-movie-card [moviecard]='movie'></app-movie-card>
+                <!-- <partil /> -->
+                <!--  <partial name="_MovieCard" model="movie"/> -->
+                <!-- @Input decorator -->
+                <!-- @Output -->
+            </div>
+        </div>
+    </div>
+</div>
