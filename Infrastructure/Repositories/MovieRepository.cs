@@ -50,13 +50,38 @@ namespace Infrastructure.Repositories
             return movies;
         }
 
+        //public async Task<List<Movie>> GetTop30RatedMovies()
+        //{
+        //    var movies = await _dbContext.Movies.OrderByDescending(m => m.Rating).Take(30).ToListAsync();
+        //    return movies;
+        //}
+
         public async Task<List<Movie>> GetTop30RatedMovies()
         {
-            var movies = await _dbContext.Movies.OrderByDescending(m => m.Rating).Take(30).ToListAsync();
-            return movies;
+            var topRatedMovies = await _dbContext.Reviews.Include(m => m.Movie)
+                                                 .GroupBy(r => new
+                                                 {
+                                                     Id = r.MovieId,
+                                                     r.Movie.PosterUrl,
+                                                     r.Movie.Title,
+                                                     r.Movie.ReleaseDate
+                                                 })
+                                                 .OrderByDescending(g => g.Average(m => m.Rating))
+                                                 .Select(m => new Movie
+                                                 {
+                                                     Id = m.Key.Id,
+                                                     PosterUrl = m.Key.PosterUrl,
+                                                     Title = m.Key.Title,
+                                                     ReleaseDate = m.Key.ReleaseDate,
+                                                     Rating = m.Average(x => x.Rating)
+                                                 })
+                                                 .Take(50)
+                                                 .ToListAsync();
+
+            return topRatedMovies;
         }
 
-        
+
         public async Task<List<Review>> GetReviewByMovie(int id)
         {
             var reviews = await _dbContext.Set<Review>().Where(m => m.MovieId == id).ToListAsync();

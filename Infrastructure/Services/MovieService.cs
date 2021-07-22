@@ -46,6 +46,8 @@ namespace Infrastructure.Services
             return movieCards;
         }
 
+     
+
         public async Task<List<MovieCardResponseModel>> GetMovies()
         {
             var movies = await _movieRepository.GetAll();

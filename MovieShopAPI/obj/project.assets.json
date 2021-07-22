@@ -8899,7 +8899,7 @@
       "outputPath": "/Users/feli-v/Downloads/MovieShopMVC/MovieShopAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/feli-v/.config/NuGet/NuGet.Config"
+        "/Users/feli-v/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
